@@ -1,12 +1,9 @@
-# docker-compose.yml
-
-version: '3'
+version: '3.8'
 
 services:
   todo-app:
-    build: .
+    image: officeworkgovind/node-app-test-new:latest
     ports:
-      - "6060:6060"
+      - "3000:3000"
     volumes:
-      - .:/usr/src/app
-
+      - /some/writable/path:/usr/src/app
